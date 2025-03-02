@@ -1,0 +1,1389 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": true
+    },
+    "targetId": "",
+    "targetDisplayName": ".NET 8.0"
+  },
+  "analysisStartTime": "2024-05-18T14:04:23.1836122Z",
+  "analysisEndTime": "2024-05-18T14:05:54.4870819Z",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 4,
+      "incidents": 55,
+      "effort": 55
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 2,
+        "Optional": 51,
+        "Potential": 2,
+        "Information": 0
+      },
+      "category": {
+        "Project": 2,
+        "Api": 53
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 55,
+      "ruleInstances": [
+        {
+          "incidentId": "7423990f-7b1a-4bab-af69-ef4f55aaac01",
+          "ruleId": "Project.0001",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj"
+          }
+        },
+        {
+          "incidentId": "fc3b2d00-50dd-482a-baa6-36ae778f4647",
+          "ruleId": "Project.0002",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+            "snippet": "Current: .NETFramework,Version=v4.7.1\nNew: net8.0"
+          }
+        },
+        {
+          "incidentId": "a31805fa-841e-4cf4-b749-3f6db68dcef0",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "T UnityEditor.ObjectCopier::DeepClone(T)\r\n    -\u003E System.Boolean System.Type::get_IsSerializable()",
+            "protectedId": "P:System.Type.IsSerializable",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.type.isserializable",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "db72edba-e620-49cd-88d1-259af864adbf",
+          "ruleId": "Api.0003",
+          "description": "Thread.Abort is not supported and throws PlatformNotSupportedException.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "System.Boolean UnityEditor.MonoProcessRunner::Run(System.Diagnostics.Process)\r\n    -\u003E System.Void System.Threading.Thread::Abort()",
+            "protectedId": "M:System.Threading.Thread.Abort",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.threading.thread.abort",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0006",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0006",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "29397f08-d31b-45b5-8522-0ef4d248fdbb",
+          "ruleId": "Api.0003",
+          "description": "This API should not be used to create mutable strings. See https://go.microsoft.com/fwlink/?linkid=2084035 for alternatives.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "System.Boolean UnityEditor.SearchUtility::ParseSearchString(System.String,UnityEditor.SearchFilter)\r\n    -\u003E System.String System.String::Copy(System.String)",
+            "protectedId": "M:System.String.Copy(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.string.copy",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "9da208a7-7537-4757-9123-e82be8c305ec",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Void Newtonsoft.Json.JsonSerializer::set_TypeNameAssemblyFormat(System.Runtime.Serialization.Formatters.FormatterAssemblyStyle)\r\n    -\u003E System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "protectedId": "T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatters.formatterassemblystyle",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "2f0a27e7-1566-47f5-a383-61cd5be923f7",
+          "ruleId": "Api.0003",
+          "description": "OffsetToStringData has been deprecated. Use string.GetPinnableReference() instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "Unity.Profiling.ProfilerRecorder Unity.Profiling.ProfilerRecorder::StartNew(Unity.Profiling.ProfilerCategory,System.String,System.Int32,Unity.Profiling.ProfilerRecorderOptions)\r\n    -\u003E System.Int32 System.Runtime.CompilerServices.RuntimeHelpers::get_OffsetToStringData()",
+            "protectedId": "P:System.Runtime.CompilerServices.RuntimeHelpers.OffsetToStringData",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.runtimehelpers.offsettostringdata",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "ba917ed6-6a1d-490d-8e49-4d759d962ab2",
+          "ruleId": "Api.0003",
+          "description": "OffsetToStringData has been deprecated. Use string.GetPinnableReference() instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "Unity.Profiling.ProfilerMarkerWithStringData/AutoScope Unity.Profiling.ProfilerMarkerWithStringData::Auto(System.String)\r\n    -\u003E System.Int32 System.Runtime.CompilerServices.RuntimeHelpers::get_OffsetToStringData()",
+            "protectedId": "P:System.Runtime.CompilerServices.RuntimeHelpers.OffsetToStringData",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.runtimehelpers.offsettostringdata",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "c92c5e52-c40c-40b9-bb1c-a8c0da917b4b",
+          "ruleId": "Api.0003",
+          "description": "OffsetToStringData has been deprecated. Use string.GetPinnableReference() instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "System.String UnityEditor.Profiling.Memory.Experimental.ConversionFunctions::ToString(System.Byte[],System.UInt32,System.UInt32)\r\n    -\u003E System.Int32 System.Runtime.CompilerServices.RuntimeHelpers::get_OffsetToStringData()",
+            "protectedId": "P:System.Runtime.CompilerServices.RuntimeHelpers.OffsetToStringData",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.runtimehelpers.offsettostringdata",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "268886c6-72f1-40ca-9e34-b560a7901a57",
+          "ruleId": "Api.0003",
+          "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Void Newtonsoft.Json.JsonException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)\r\n    -\u003E System.Void System.Exception::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "protectedId": "M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.exception.exception",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "3e3fa7a2-89e3-4d14-9880-8af28b78fd14",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "System.Object[] UnityEditor.MPE.EventService::CreateDataInfosAndFormatDataForSerialization(System.Object[],UnityEditor.MPE.EventDataSerialization)\r\n    -\u003E System.Boolean System.Type::get_IsSerializable()",
+            "protectedId": "P:System.Type.IsSerializable",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.type.isserializable",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "3c3127d8-a3e3-4a5c-abb3-46a8bbe44e22",
+          "ruleId": "Api.0003",
+          "description": "WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\ScriptAssemblies\\Unity.PlasticSCM.Editor.dll",
+            "snippet": "System.Void Unity.PlasticSCM.Editor.Views.Welcome.DownloadAndInstallOperation::DownloadInstaller(System.String,System.String,Unity.PlasticSCM.Editor.UI.UIElements.ProgressControlsForDialogs)\r\n    -\u003E System.Net.WebRequest System.Net.WebRequest::Create(System.String)",
+            "protectedId": "M:System.Net.WebRequest.Create(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequest.create",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "78409f99-2401-4c15-a9f2-eddc348be224",
+          "ruleId": "Api.0003",
+          "description": "This API should not be used to create mutable strings. See https://go.microsoft.com/fwlink/?linkid=2084035 for alternatives.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\ScriptAssemblies\\Unity.2D.Psdimporter.Editor.dll",
+            "snippet": "System.String UnityEditor.U2D.PSD.PSDImporter::GetUniqueName(System.String,System.Collections.Generic.List\u00601\u003CSystem.Int32\u003E,System.Boolean,UnityEngine.Object)\r\n    -\u003E System.String System.String::Copy(System.String)",
+            "protectedId": "M:System.String.Copy(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.string.copy",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "b8d46f19-7f52-471f-9ef4-8266be7a40b4",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Void Newtonsoft.Json.Serialization.JsonSerializerInternalWriter::SerializeISerializable(Newtonsoft.Json.JsonWriter,System.Runtime.Serialization.ISerializable,Newtonsoft.Json.Serialization.JsonISerializableContract,Newtonsoft.Json.Serialization.JsonProperty,Newtonsoft.Json.Serialization.JsonContainerContract,Newtonsoft.Json.Serialization.JsonProperty)\r\n    -\u003E System.Void System.Runtime.Serialization.ISerializable::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "protectedId": "M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable.getobjectdata",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "a5d56d34-cdd5-4c10-852a-8e258d8e8324",
+          "ruleId": "Api.0003",
+          "description": "WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\ScriptAssemblies\\Unity.PlasticSCM.Editor.dll",
+            "snippet": "Unity.PlasticSCM.Editor.WebApi.IsCollabProjectMigratedResponse Unity.PlasticSCM.Editor.WebApi.WebRestApiClient/PlasticScm::IsCollabProjectMigrated(System.String,System.String)\r\n    -\u003E System.Net.WebRequest System.Net.WebRequest::Create(System.Uri)",
+            "protectedId": "M:System.Net.WebRequest.Create(System.Uri)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequest.create",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "da41bbf9-f783-4e13-9914-a398dfd0401a",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Void Newtonsoft.Json.JsonSerializerSettings::set_TypeNameAssemblyFormat(System.Runtime.Serialization.Formatters.FormatterAssemblyStyle)\r\n    -\u003E System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "protectedId": "T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatters.formatterassemblystyle",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "e26f75b4-d825-47b0-a99e-3915c489a9ea",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Runtime.Serialization.Formatters.FormatterAssemblyStyle Newtonsoft.Json.JsonSerializer::TypeNameAssemblyFormat()\r\n    -\u003E System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "protectedId": "T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatters.formatterassemblystyle",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "650e8125-75cb-4458-9f84-16153cded985",
+          "ruleId": "Api.0003",
+          "description": "BinaryFormatter serialization is obsolete and should not be used. See https://aka.ms/binaryformatter for more information.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "UnityEditor.Scripting.APIUpdater.AssemblyDependencyGraph UnityEditor.Scripting.APIUpdater.AssemblyDependencyGraph::LoadFrom(System.IO.Stream)\r\n    -\u003E System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "protectedId": "T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatters.binary.binaryformatter",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0011",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0011",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "4913e1cc-18c8-4375-93d8-7a1a9318a546",
+          "ruleId": "Api.0003",
+          "description": "ExecutionEngineException previously indicated an unspecified fatal error in the runtime. The runtime no longer raises this exception so this type is obsolete.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "System.Void UnityEditor.Scripting.Compilers.APIUpdaterHelper::UpdateScripts(System.String,System.String,System.String[])\r\n    -\u003E System.ExecutionEngineException",
+            "protectedId": "T:System.ExecutionEngineException",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.executionengineexception",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "00d9fa8c-8c2e-46f7-8a44-126295a51597",
+          "ruleId": "Api.0003",
+          "description": "WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\ScriptAssemblies\\Unity.PlasticSCM.Editor.dll",
+            "snippet": "Unity.PlasticSCM.Editor.WebApi.TokenExchangeResponse Unity.PlasticSCM.Editor.WebApi.WebRestApiClient/PlasticScm::TokenExchange(System.String)\r\n    -\u003E System.Net.WebRequest System.Net.WebRequest::Create(System.Uri)",
+            "protectedId": "M:System.Net.WebRequest.Create(System.Uri)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequest.create",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "ea9fce7a-5564-43a3-bbf5-b04f3985b2b3",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Runtime.Serialization.Formatters.FormatterAssemblyStyle Newtonsoft.Json.JsonSerializerSettings::TypeNameAssemblyFormat()\r\n    -\u003E System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "protectedId": "T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatters.formatterassemblystyle",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "4e13f0c5-e538-46e5-8110-2645dd3ee446",
+          "ruleId": "Api.0003",
+          "description": "OffsetToStringData has been deprecated. Use string.GetPinnableReference() instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "System.Int32 UnityEditor.Profiling.Memory.Experimental.PackedMemorySnapshot::ReadStringFromByteArray(System.Byte[],System.Int32,System.Int32,System.String\u0026)\r\n    -\u003E System.Int32 System.Runtime.CompilerServices.RuntimeHelpers::get_OffsetToStringData()",
+            "protectedId": "P:System.Runtime.CompilerServices.RuntimeHelpers.OffsetToStringData",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.runtimehelpers.offsettostringdata",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "7faf61a4-97b7-4375-b7a6-75218b169db9",
+          "ruleId": "Api.0003",
+          "description": "BinaryFormatter serialization is obsolete and should not be used. See https://aka.ms/binaryformatter for more information.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter UnityEditor.Macros.MethodEvaluator::s_Formatter\r\n    -\u003E System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "protectedId": "T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatters.binary.binaryformatter",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0011",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0011",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "a1f1c3b8-0282-49b9-b363-dfea2c556938",
+          "ruleId": "Api.0003",
+          "description": "WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\ScriptAssemblies\\Unity.PlasticSCM.Editor.dll",
+            "snippet": "PlasticGui.Help.NewVersions.NewVersionResponse Unity.PlasticSCM.Editor.WebApi.WebRestApiClient/PlasticScm::GetLastVersion(Codice.CM.Common.Edition)\r\n    -\u003E System.Net.WebRequest System.Net.WebRequest::Create(System.Uri)",
+            "protectedId": "M:System.Net.WebRequest.Create(System.Uri)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequest.create",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "a2615942-26bb-46b3-aa2f-f1d27c7531c0",
+          "ruleId": "Api.0003",
+          "description": "XmlReaderSettings.ProhibitDtd has been deprecated. Use DtdProcessing instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\PlaybackEngines\\iOSSupport\\UnityEditor.iOS.Extensions.Xcode.dll",
+            "snippet": "System.Xml.Linq.XDocument UnityEditor.iOS.Xcode.PlistDocument::ParseXmlNoDtd(System.String)\r\n    -\u003E System.Void System.Xml.XmlReaderSettings::set_ProhibitDtd(System.Boolean)",
+            "protectedId": "P:System.Xml.XmlReaderSettings.ProhibitDtd",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreadersettings.prohibitdtd",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "e215ff11-d69d-4383-8a8d-f7fc216f574a",
+          "ruleId": "Api.0003",
+          "description": "WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\ScriptAssemblies\\Unity.PlasticSCM.Editor.dll",
+            "snippet": "System.String Unity.PlasticSCM.Editor.WebApi.WebRestApiClient/CloudServer::WebLogin(System.String,System.String,OrganizationCredentials)\r\n    -\u003E System.Net.WebRequest System.Net.WebRequest::Create(System.Uri)",
+            "protectedId": "M:System.Net.WebRequest.Create(System.Uri)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequest.create",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "3eae2275-efe3-44e5-9ec2-a4289461e3a7",
+          "ruleId": "Api.0003",
+          "description": "WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\ScriptAssemblies\\Unity.PlasticSCM.Editor.dll",
+            "snippet": "Unity.PlasticSCM.Editor.WebApi.CredentialsResponse Unity.PlasticSCM.Editor.WebApi.WebRestApiClient/PlasticScm::GetCredentials(System.String)\r\n    -\u003E System.Net.WebRequest System.Net.WebRequest::Create(System.Uri)",
+            "protectedId": "M:System.Net.WebRequest.Create(System.Uri)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequest.create",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "3d0f5bcd-077f-40bb-aad5-6ff2795ff918",
+          "ruleId": "Api.0003",
+          "description": "WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\ScriptAssemblies\\Unity.PlasticSCM.Editor.dll",
+            "snippet": "Unity.PlasticSCM.Editor.WebApi.CurrentUserAdminCheckResponse Unity.PlasticSCM.Editor.WebApi.WebRestApiClient/PlasticScm::IsUserAdmin(System.String,System.String)\r\n    -\u003E System.Net.WebRequest System.Net.WebRequest::Create(System.Uri)",
+            "protectedId": "M:System.Net.WebRequest.Create(System.Uri)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequest.create",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "04dc114f-533b-427e-8a17-6959cd8f0e63",
+          "ruleId": "Api.0003",
+          "description": "WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\ScriptAssemblies\\Unity.PlasticSCM.Editor.dll",
+            "snippet": "Unity.PlasticSCM.Editor.WebApi.ChangesetFromCollabCommitResponse Unity.PlasticSCM.Editor.WebApi.WebRestApiClient/CloudServer::GetChangesetFromCollabCommit(System.String,System.String,System.String,System.String,System.String)\r\n    -\u003E System.Net.WebRequest System.Net.WebRequest::Create(System.Uri)",
+            "protectedId": "M:System.Net.WebRequest.Create(System.Uri)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequest.create",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "3e2b2620-8f3a-4bd7-9d23-b85f27685316",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.CodeDom, 8.0.0.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.UIElementsModule.dll",
+            "snippet": "System.Boolean UnityEditor.UIElements.UIElementsEditorWindowCreator::Validate(System.String,System.String)\r\n    -\u003E System.Boolean System.CodeDom.Compiler.CodeGenerator::IsValidLanguageIndependentIdentifier(System.String)",
+            "protectedId": "M:System.CodeDom.Compiler.CodeGenerator.IsValidLanguageIndependentIdentifier(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.codedom.compiler.codegenerator.isvalidlanguageindependentidentifier",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "af6e7e46-11db-43cb-ba5c-e47c66297e49",
+          "ruleId": "Api.0003",
+          "description": "Assembly.LoadWithPartialName has been deprecated. Use Assembly.Load() instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Type Newtonsoft.Json.Serialization.DefaultSerializationBinder::GetTypeFromTypeNameKey(Newtonsoft.Json.Utilities.StructMultiKey\u00602\u003CSystem.String,System.String\u003E)\r\n    -\u003E System.Reflection.Assembly System.Reflection.Assembly::LoadWithPartialName(System.String)",
+            "protectedId": "M:System.Reflection.Assembly.LoadWithPartialName(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.reflection.assembly.loadwithpartialname",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "fa32ed2d-dd27-4645-a323-04afc7723796",
+          "ruleId": "Api.0003",
+          "description": "Derived cryptographic types are obsolete. Use the Create method on the base type instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Boolean UnityEngine.Security::VerifySignature(System.String,System.Byte[])\r\n    -\u003E System.Security.Cryptography.SHA1CryptoServiceProvider",
+            "protectedId": "T:System.Security.Cryptography.SHA1CryptoServiceProvider",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.sha1cryptoserviceprovider",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0021",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0021",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "67accd2d-fccd-441b-9fc0-a75d9fe68373",
+          "ruleId": "Api.0003",
+          "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Void UnityEngine.UnityException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)\r\n    -\u003E System.Void System.SystemException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "protectedId": "M:System.SystemException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.systemexception.systemexception",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "c4f050f6-966c-474c-bb0d-b4a489af0801",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "Newtonsoft.Json.Serialization.JsonFormatterConverter\r\n    -\u003E System.Runtime.Serialization.IFormatterConverter",
+            "protectedId": "T:System.Runtime.Serialization.IFormatterConverter",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iformatterconverter",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "8b14ddf6-f078-47cc-b200-3bd36b957a4a",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Runtime.Serialization.Formatters.FormatterAssemblyStyle Newtonsoft.Json.Serialization.JsonSerializerProxy::TypeNameAssemblyFormat()\r\n    -\u003E System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "protectedId": "T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatters.formatterassemblystyle",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "012f95ed-2104-42db-b03d-e663c4d544c0",
+          "ruleId": "Api.0003",
+          "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Void UnityEngine.MissingComponentException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)\r\n    -\u003E System.Void System.SystemException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "protectedId": "M:System.SystemException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.systemexception.systemexception",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "0c9095d3-7356-4c43-8b47-b4dd90dce2de",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.CodeDom, 8.0.0.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "System.Boolean UnityEditor.AddComponent.NewScriptDropdownItem::ClassNameIsInvalid()\r\n    -\u003E System.Boolean System.CodeDom.Compiler.CodeGenerator::IsValidLanguageIndependentIdentifier(System.String)",
+            "protectedId": "M:System.CodeDom.Compiler.CodeGenerator.IsValidLanguageIndependentIdentifier(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.codedom.compiler.codegenerator.isvalidlanguageindependentidentifier",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "aa08b997-06be-43e3-8e57-9d20a3e1c39c",
+          "ruleId": "Api.0003",
+          "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Void UnityEngine.UnassignedReferenceException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)\r\n    -\u003E System.Void System.SystemException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "protectedId": "M:System.SystemException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.systemexception.systemexception",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "098bb370-bf08-4018-8dc6-87572ea0abab",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Void UnityEngine.Serialization.UnitySurrogateSelector::ChainSelector(System.Runtime.Serialization.ISurrogateSelector)\r\n    -\u003E System.Runtime.Serialization.ISurrogateSelector",
+            "protectedId": "T:System.Runtime.Serialization.ISurrogateSelector",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.isurrogateselector",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "b9c979ca-4190-4f72-9b6f-94ca196a3842",
+          "ruleId": "Api.0003",
+          "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Void UnityEngine.MissingReferenceException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)\r\n    -\u003E System.Void System.SystemException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "protectedId": "M:System.SystemException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.systemexception.systemexception",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "709d004f-18c7-4ff4-9fdb-eeb14312c207",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Object Newtonsoft.Json.Serialization.JsonSerializerInternalReader::CreateISerializable(Newtonsoft.Json.JsonReader,Newtonsoft.Json.Serialization.JsonISerializableContract,Newtonsoft.Json.Serialization.JsonProperty,System.String)\r\n    -\u003E System.Void System.Runtime.Serialization.SerializationInfo::.ctor(System.Type,System.Runtime.Serialization.IFormatterConverter)",
+            "protectedId": "M:System.Runtime.Serialization.SerializationInfo.#ctor(System.Type,System.Runtime.Serialization.IFormatterConverter)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.serializationinfo.serializationinfo",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "89904ff8-3f01-41be-bdc5-7c75437a52bd",
+          "ruleId": "Api.0003",
+          "description": "WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "System.String UnityEditor.CrashReporting.CrashReporting::GetUsymUploadAuthToken()\r\n    -\u003E System.Net.WebRequest System.Net.WebRequest::Create(System.String)",
+            "protectedId": "M:System.Net.WebRequest.Create(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequest.create",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0014",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "73ae2524-6211-408f-94c3-d78d2d7ebc7d",
+          "ruleId": "Api.0003",
+          "description": "BinaryFormatter serialization is obsolete and should not be used. See https://aka.ms/binaryformatter for more information.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "T UnityEditor.ObjectCopier::DeepClone(T)\r\n    -\u003E System.Runtime.Serialization.IFormatter",
+            "protectedId": "T:System.Runtime.Serialization.IFormatter",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iformatter",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0011",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0011",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "e018a53c-aaf2-4122-b166-f7032a416ec8",
+          "ruleId": "Api.0003",
+          "description": "OffsetToStringData has been deprecated. Use string.GetPinnableReference() instead.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Int32 UnityEngine.Profiling.Memory.Experimental.MemoryProfiler::WriteStringToByteArray(System.Byte[],System.Int32,System.String)\r\n    -\u003E System.Int32 System.Runtime.CompilerServices.RuntimeHelpers::get_OffsetToStringData()",
+            "protectedId": "P:System.Runtime.CompilerServices.RuntimeHelpers.OffsetToStringData",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.runtimehelpers.offsettostringdata",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "9df73a0e-55ab-442a-b4a8-bc3d674a3835",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Void Newtonsoft.Json.Serialization.JsonSerializerInternalWriter::SerializeISerializable(Newtonsoft.Json.JsonWriter,System.Runtime.Serialization.ISerializable,Newtonsoft.Json.Serialization.JsonISerializableContract,Newtonsoft.Json.Serialization.JsonProperty,Newtonsoft.Json.Serialization.JsonContainerContract,Newtonsoft.Json.Serialization.JsonProperty)\r\n    -\u003E System.Void System.Runtime.Serialization.SerializationInfo::.ctor(System.Type,System.Runtime.Serialization.IFormatterConverter)",
+            "protectedId": "M:System.Runtime.Serialization.SerializationInfo.#ctor(System.Type,System.Runtime.Serialization.IFormatterConverter)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.serializationinfo.serializationinfo",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "6891b0fe-3113-4447-b8c1-eff69650e355",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Runtime.Serialization.ISerializationSurrogate UnityEngine.Serialization.UnitySurrogateSelector::GetSurrogate(System.Type,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector\u0026)\r\n    -\u003E System.Runtime.Serialization.ISerializationSurrogate",
+            "protectedId": "T:System.Runtime.Serialization.ISerializationSurrogate",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializationsurrogate",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "58f29257-42b8-4b45-a0bf-f53c8f6ba595",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Users\\Nathan\\RPS\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\Newtonsoft.Json.dll",
+            "snippet": "System.Void Newtonsoft.Json.Serialization.JsonSerializerProxy::set_TypeNameAssemblyFormat(System.Runtime.Serialization.Formatters.FormatterAssemblyStyle)\r\n    -\u003E System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "protectedId": "T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatters.formatterassemblystyle",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "286351f2-8347-4d28-a896-9d3185473198",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Object UnityEngine.Serialization.ListSerializationSurrogate::SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)\r\n    -\u003E System.Runtime.Serialization.ISurrogateSelector",
+            "protectedId": "T:System.Runtime.Serialization.ISurrogateSelector",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.isurrogateselector",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "6264d360-a403-4b9c-ab29-f0cd975c1560",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "UnityEngine.Serialization.UnitySurrogateSelector\r\n    -\u003E System.Runtime.Serialization.ISurrogateSelector",
+            "protectedId": "T:System.Runtime.Serialization.ISurrogateSelector",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.isurrogateselector",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "76ac6676-eeca-4639-8156-5c1158aca1d5",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "UnityEngine.Serialization.DictionarySerializationSurrogate\u00602\r\n    -\u003E System.Runtime.Serialization.ISerializationSurrogate",
+            "protectedId": "T:System.Runtime.Serialization.ISerializationSurrogate",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializationsurrogate",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "ae919d40-dd48-4250-a3c0-cac2215cbb1b",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "UnityEngine.Serialization.ListSerializationSurrogate\r\n    -\u003E System.Runtime.Serialization.ISerializationSurrogate",
+            "protectedId": "T:System.Runtime.Serialization.ISerializationSurrogate",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializationsurrogate",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "1c9b643b-3109-43e3-a9f2-081b7353608a",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Runtime.Serialization.ISerializationSurrogate UnityEngine.Serialization.ListSerializationSurrogate::Default\r\n    -\u003E System.Runtime.Serialization.ISerializationSurrogate",
+            "protectedId": "T:System.Runtime.Serialization.ISerializationSurrogate",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializationsurrogate",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "cce8fb25-c189-4341-adcf-0ff36751f170",
+          "ruleId": "Api.0003",
+          "description": "BinaryFormatter serialization is obsolete and should not be used. See https://aka.ms/binaryformatter for more information.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEditor.CoreModule.dll",
+            "snippet": "System.Void UnityEditor.Scripting.APIUpdater.AssemblyDependencyGraph::SaveTo(System.IO.Stream)\r\n    -\u003E System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "protectedId": "T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatters.binary.binaryformatter",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0011",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0011",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "87d4e4c4-4cdf-4ae7-850f-1394a72f1a8f",
+          "ruleId": "Api.0003",
+          "description": "Formatter-based serialization is obsolete and should not be used.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Object UnityEngine.Serialization.DictionarySerializationSurrogate\u00602::SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)\r\n    -\u003E System.Runtime.Serialization.ISurrogateSelector",
+            "protectedId": "T:System.Runtime.Serialization.ISurrogateSelector",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.isurrogateselector",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0050",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "a29469b7-81f5-4a1b-918a-bba5de9e3d90",
+          "ruleId": "Api.0003",
+          "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code.",
+          "projectPath": "C:\\Users\\Nathan\\RPS\\Assembly-CSharp.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Binary",
+            "path": "C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.32f1\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+            "snippet": "System.Void UnityEngine.Serialization.DictionarySerializationSurrogate\u00602::GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)\r\n    -\u003E System.Void System.Collections.Generic.Dictionary\u00602\u003CTKey,TValue\u003E::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "protectedId": "M:System.Collections.Generic.Dictionary\u00602.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2.getobjectdata",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "isCustom": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "Project.0001": {
+      "id": "Project.0001",
+      "description": "Project file needs to be converted to SDK style. Modern .NET framework projects require a change in the project file format and use SDK corresponding to project flavor and functionality.",
+      "label": "Project file needs to be converted to SDK style",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to correspinding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in moderrn .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "description": "API is obsolete.",
+      "label": "API is obsolete",
+      "severity": "Optional",
+      "effort": 1
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "description": "Some API that lived in older versions of .NET frameworks were moved to standalone NuGet packages that could be added to projects explicitly.",
+      "label": "API available in NuGet package",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
